@@ -52,65 +52,89 @@
       📄 Download Resume
     </a>
   </section>
-
-<!-- ===== Professional Skills (ICON + CSS animation ready) ===== -->
+<!-- ===== PROFESSIONAL SKILLS SECTION ===== -->
 <section id="professional-skills" class="professional-skills">
   <div class="container">
     <h2 class="section-title">Professional Skills</h2>
-    <p class="section-subtitle">A concise, professional overview of core technical, research, and M&E competencies.</p>
+    <p class="section-subtitle">
+      A concise, professional overview of core technical, research, and M&E competencies.
+    </p>
 
     <div class="skills-grid">
       <!-- Languages -->
-      <article class="skill-card" aria-labelledby="skill-langs">
-        <div class="skill-icon"><i class="fas fa-code" aria-hidden="true"></i></div>
-        <h3 id="skill-langs" class="skill-title">Languages</h3>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-code"></i></div>
+        <h3 class="skill-title">Languages</h3>
         <p class="skill-items">Python · R · SQL · LaTeX</p>
-      </article>
+      </div>
 
       <!-- Monitoring & Evaluation -->
-      <article class="skill-card" aria-labelledby="skill-me">
-        <div class="skill-icon"><i class="fas fa-project-diagram" aria-hidden="true"></i></div>
-        <h3 id="skill-me" class="skill-title">Monitoring &amp; Evaluation</h3>
-        <p class="skill-items">Logical Framework (LogFrame) · Theory of Change · Results-Based Management</p>
-      </article>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+        <h3 class="skill-title">Monitoring &amp; Evaluation</h3>
+        <p class="skill-items">
+          Logical Framework · Theory of Change · Results-Based Management
+        </p>
+      </div>
 
       <!-- Research -->
-      <article class="skill-card" aria-labelledby="skill-research">
-        <div class="skill-icon"><i class="fas fa-flask" aria-hidden="true"></i></div>
-        <h3 id="skill-research" class="skill-title">Research</h3>
-        <p class="skill-items">Survey Design · Data Cleaning · Literature Review · Impact Evaluation</p>
-      </article>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-flask"></i></div>
+        <h3 class="skill-title">Research</h3>
+        <p class="skill-items">
+          Survey Design · Data Cleaning · Literature Review · Impact Evaluation
+        </p>
+      </div>
 
       <!-- Visualization -->
-      <article class="skill-card" aria-labelledby="skill-vis">
-        <div class="skill-icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></div>
-        <h3 id="skill-vis" class="skill-title">Visualization</h3>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3 class="skill-title">Visualization</h3>
         <p class="skill-items">Tableau · Power BI · ggplot2 · Matplotlib</p>
-      </article>
+      </div>
 
       <!-- Automation -->
-      <article class="skill-card" aria-labelledby="skill-auto">
-        <div class="skill-icon"><i class="fas fa-cogs" aria-hidden="true"></i></div>
-        <h3 id="skill-auto" class="skill-title">Automation</h3>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+        <h3 class="skill-title">Automation</h3>
         <p class="skill-items">Apache Airflow · n8n · Power Automate</p>
-      </article>
+      </div>
 
       <!-- Statistical Analysis -->
-      <article class="skill-card" aria-labelledby="skill-stats">
-        <div class="skill-icon"><i class="fas fa-calculator" aria-hidden="true"></i></div>
-        <h3 id="skill-stats" class="skill-title">Statistical Analysis</h3>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+        <h3 class="skill-title">Statistical Analysis</h3>
         <p class="skill-items">SPSS · NVivo</p>
-      </article>
+      </div>
 
       <!-- Cloud Platforms -->
-      <article class="skill-card" aria-labelledby="skill-cloud">
-        <div class="skill-icon"><i class="fas fa-cloud" aria-hidden="true"></i></div>
-        <h3 id="skill-cloud" class="skill-title">Cloud Platforms</h3>
-        <p class="skill-items">Google Cloud Platform (GCP) · Microsoft Azure</p>
-      </article>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+        <h3 class="skill-title">Cloud Platforms</h3>
+        <p class="skill-items">Google Cloud Platform · Microsoft Azure</p>
+      </div>
     </div>
   </div>
-</section> 
+</section>
+
+<!-- Animation script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll(".skill-card");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    cards.forEach(card => observer.observe(card));
+  });
+</script>
 
   <!-- ===== PROJECTS SECTION ===== -->
 <section id="projects">
