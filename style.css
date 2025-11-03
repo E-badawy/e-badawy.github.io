@@ -103,19 +103,19 @@ h2 {
   font-size: 1.05em;
 }
 
-
-/* ===== Professional Skills Section ===== */
+/* ===== PROFESSIONAL SKILLS SECTION ===== */
 
 .professional-skills {
   padding: 80px 20px;
   background-color: #f8f9fb;
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
 .professional-skills .section-title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #0a2342; /* navy blue */
+  color: #0a2342;
   margin-bottom: 10px;
 }
 
@@ -129,36 +129,29 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  justify-content: center;
-  align-items: stretch;
 }
 
-/* Skill Cards */
 .skill-card {
-  background: #ffffff;
+  background: #fff;
   border-radius: 16px;
   padding: 30px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: all 0.4s ease;
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeUp 1s forwards;
 }
 
-.skill-card:nth-child(1) { animation-delay: 0.1s; }
-.skill-card:nth-child(2) { animation-delay: 0.2s; }
-.skill-card:nth-child(3) { animation-delay: 0.3s; }
-.skill-card:nth-child(4) { animation-delay: 0.4s; }
-.skill-card:nth-child(5) { animation-delay: 0.5s; }
-.skill-card:nth-child(6) { animation-delay: 0.6s; }
-.skill-card:nth-child(7) { animation-delay: 0.7s; }
+.skill-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
 
 .skill-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 8px 16px rgba(10, 35, 66, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 18px rgba(10, 35, 66, 0.15);
 }
 
-/* Icons */
 .skill-icon {
   font-size: 2rem;
   color: #0a2342;
@@ -178,32 +171,20 @@ h2 {
   line-height: 1.5;
 }
 
-/* Animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px) scale(0.98);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .professional-skills {
     padding: 60px 15px;
   }
 
-  .section-title {
-    font-size: 1.8rem;
-  }
-
   .skill-card {
     padding: 25px 15px;
   }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
 }
+
 
 /* ---------- RESUME BUTTON ---------- */
 .resume-btn {
