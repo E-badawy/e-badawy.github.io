@@ -278,6 +278,9 @@ h2 {
 
 /* Hidden projects initially */
 .project-hidden {
+  display: block;       /* keep block layout */
+  opacity: 0;           /* invisible */
+  transform: translateY(30px);
   display: none;
 }
 
