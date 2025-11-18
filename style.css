@@ -379,10 +379,11 @@ canvas {
 
 .contact-form button.btn {
   display: block; 
-  width: 90%; 
+  width: 100%; 
   padding: 12px;
   background-color: #002b5b; 
-  color: white; border: none; 
+  color: white; 
+  border: none; 
   border-radius: 10px; 
   font-size: 1rem; 
   cursor: pointer; 
