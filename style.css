@@ -312,8 +312,9 @@ canvas {
   display: flex; 
   flex-wrap: wrap;
   gap: 40px; 
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
+  margin: 0 auto;
 }
 
 .contact-info {
@@ -378,11 +379,12 @@ canvas {
 .contact-form button.btn {
   display: block; 
   width: 90%; 
-  padding: 
-    12px;
+  padding: 12px;
   background-color: #002b5b; 
   color: white; border: none; 
-  border-radius: 10px; font-size: 1rem; cursor: pointer; 
+  border-radius: 10px; 
+  font-size: 1rem; 
+  cursor: pointer; 
   transition: background 0.3s; 
 }
 
@@ -400,7 +402,7 @@ canvas {
 
 .social-links a {
   color: #002b5b;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   transition: transform 0.3s, color 0.3s;
 }
 
