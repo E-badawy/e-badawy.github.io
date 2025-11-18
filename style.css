@@ -55,9 +55,9 @@ header {
 }
 
 .nav-btn:hover {
-    background: white;
-    color: #0A2A43;
-    border: 1px solid #0A2A43;
+    background: #003366;
+    color: white;
+    border: 1px solid #003366;
     transform: translateY(-3px);
 }
 
