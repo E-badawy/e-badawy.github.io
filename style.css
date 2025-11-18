@@ -314,6 +314,7 @@ canvas {
   gap: 40px; 
   justify-content: center;
   align-items: flex-start;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
