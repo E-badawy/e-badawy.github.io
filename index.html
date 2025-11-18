@@ -206,6 +206,7 @@ It complements the Excel VBA Search Automation System, transforming operational 
   document.getElementById('view-more-btn').addEventListener('click', function() {
     const hiddenProjects = document.querySelectorAll('.project-hidden');
     hiddenProjects.forEach(project => {
+	project.style.display = 'block'; // or 'grid-item' depending on your layout
       project.classList.remove('.project-hidden');
     });
     this.style.display = 'none'; // hide button after click
