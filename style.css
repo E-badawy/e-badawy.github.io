@@ -370,7 +370,6 @@ canvas {
 .contact-form input, 
 .contact-form textarea { 
   width: 90%; 
-  max-width: 400px; 
   padding: 12px; 
   margin-bottom: 15px;
   border: 1px solid #ddd; 
@@ -398,7 +397,7 @@ canvas {
 /* ===== Social Links ===== */
 .social-links {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 15px;
   margin-top: 20px;
 }
