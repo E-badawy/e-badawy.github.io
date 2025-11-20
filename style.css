@@ -472,7 +472,7 @@ h2 {
 /* RESPONSIVENESS FIX */
 @media (max-width: 768px) {
     .contact-container {
-        grid-template-columns: 1fr; /* Stack vertically */
+         flex-direction: column;
         text-align: center;
     }
 
@@ -495,10 +495,6 @@ h2 {
 }
 
 /* ---------- RESPONSIVENESS ---------- */
-@media (max-width: 768px) {
-  header {
-    padding: 1.5em 1em;
-  }
 
   .profile-pic {
     width: 110px;
