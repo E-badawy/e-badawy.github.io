@@ -325,14 +325,21 @@ h2 {
 }
 
 /* ---------- ANALYTICS CHART ---------- */
+/* Center the analytics chart */
 #analytics {
-  text-align: center;
+    text-align: center;
 }
 
-canvas {
-  margin-top: 20px;
-  max-width: 600px;
-  width: 100%;
+.chart-wrapper {
+    width: 100%;
+    max-width: 600px; /* keeps it clean on desktop */
+    margin: 0 auto; /* centers the container */
+    padding: 10px;
+}
+
+#skillsChart {
+    width: 100% !important;   /* force Chart.js to stretch */
+    height: auto !important;
 }
 
 /* ===== Contact Section ===== */
