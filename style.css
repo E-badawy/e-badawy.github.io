@@ -356,22 +356,20 @@ h2 {
 } 
 
 /* Main grid container: two columns */
-.contact-container { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 40px; 
-  justify-content: center; 
-  align-items: flex-start; 
-  max-width: 1000px; 
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  margin: 0 auto;
-} 
+  align-items: start;
+}
 
 /* Contact info column */ 
 .contact-info { 
   display: grid; 
   gap: 20px; 
+  justify-items: center; /* NEW → centers everything */
 } 
 
 /* Individual info boxes */ 
