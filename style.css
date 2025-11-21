@@ -357,22 +357,17 @@ h2 {
 
 /* Main grid container: two columns */
 .contact-container { 
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 40px; 
+  justify-content: center; 
+  align-items: flex-start; 
   max-width: 1000px; 
   margin: 0 auto;
-  flex-wrap: wrap; /* allows mobile stacking */
-}
-
-.contact-info,
-.contact-form {
-  flex: 1;
-  min-width: 360px;  /* prevents collapse on desktop */
-  max-width: 450px;  /* keeps them balanced */
-}
-
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  margin: 0 auto;
+  gap: 40;
+} 
 
 /* Contact info column */ 
 .contact-info { 
