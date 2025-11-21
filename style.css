@@ -506,28 +506,4 @@ align-items: center; /* Fix alignment on mobile */
   margin-top: 40px;
 }
 
-/* Card entrance animation */
-@keyframes cardEntrance {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.skill-card,
-.project-card,
-.contact-item {
-    opacity: 0;
-    transform: translateY(40px);
-}
-
-.skill-card.visible,
-.project-card.visible,
-.contact-item.visible {
-    animation: cardEntrance 0.8s ease-out forwards;
-}
 
