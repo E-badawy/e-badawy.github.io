@@ -356,14 +356,23 @@ h2 {
 } 
 
 /* Main grid container: two columns */
-.contact-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+.contact-container { 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 40px;
-  max-width: 1000px;
+  max-width: 1000px; 
   margin: 0 auto;
-  align-items: start;
+  flex-wrap: wrap; /* allows mobile stacking */
 }
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 360px;  /* prevents collapse on desktop */
+  max-width: 450px;  /* keeps them balanced */
+}
+
 
 /* Contact info column */ 
 .contact-info { 
@@ -502,35 +511,3 @@ align-items: center; /* Fix alignment on mobile */
   font-size: 0.9rem; 
   margin-top: 40px;
 }
-
-
-
-
-
-/* ===== FIX CONTACT SECTION MOBILE DISTORTION ===== */
-@media (max-width: 768px) {
-
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-info,
-  .contact-form {
-    width: 100%;
-    max-width: 420px;
-  }
-
-  .contact-item {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    width: 95%;
-  }
-
-}
-
