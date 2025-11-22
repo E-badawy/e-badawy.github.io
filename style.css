@@ -461,6 +461,19 @@ h2 {
     transform: scale(1.15);
 }
 
+
+@keyframes softPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+.skill-icon,
+.contact-item i,
+.social-links a i {
+    animation: softPulse 3.5s ease-in-out infinite;
+}
+
+
 /* RESPONSIVENESS FIX */ 
 @media (max-width: 768px) { 
 .contact-container { 
