@@ -482,6 +482,52 @@ h2 {
     animation: softPulse 3.5s ease-in-out infinite;
 }
 
+/*--------------------------------------------*/
+/* Global icon colour */
+.contact-box i,
+.social-links a i,
+.contact-box h3 i,
+.contact-box p i {
+    color: #0056b3 !important; /* navy blue theme */
+    transition: 0.3s ease-in-out;
+}
+
+/* Glow + lift hover effect */
+.contact-box:hover,
+.social-links a i:hover,
+.contact-box i:hover {
+    transform: translateY(-5px);
+    text-shadow: 0 0 12px rgba(0, 119, 255, 0.7),
+                 0 0 20px rgba(0, 119, 255, 0.5);
+}
+
+/* Pulse animation */
+@keyframes iconPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.12); }
+    100% { transform: scale(1); }
+}
+
+/* Apply pulse to all icons */
+.contact-box i,
+.social-links a i {
+    animation: iconPulse 2.5s infinite ease-in-out;
+}
+
+/* Contact cards animation */
+.contact-box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+/* Triggered when visible */
+.contact-box.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 /* RESPONSIVENESS FIX */ 
 @media (max-width: 768px) { 
